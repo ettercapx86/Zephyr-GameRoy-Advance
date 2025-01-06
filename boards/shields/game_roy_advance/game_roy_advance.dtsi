@@ -1,6 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-
-// is the matrix correct for the right half?
+#include "game_roy_advance-layouts.dtsi"
 
 / {
 	chosen {
