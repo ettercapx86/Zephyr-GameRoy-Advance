@@ -13,8 +13,8 @@
                 default_layer {
                     bindings = <
 //      ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                                                   ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
-//      │   `~    │    1    │    2    │    3    │    4    │    5    │    6    │                                                   |    7    |     8   |    9    |    0    |    -    |    =    |  BSPC      *NONE  |
-         &kp GRAVE   &kp N1    &kp N2    &kp N3   &kp N4    &kp N5    &kp N6                                                        &kp N7     &kp N8    &kp N9   &kp N0   &kp MINUS &kp EQUAL  &kp BSPC   &none
+//      │   `~    │    1    │    2    │    3    │    4    │    5    │    6    │                                                   |    7    |     8   |    9    |    0    |    -    |    =    |  BSPC       BSPC  |
+         &kp GRAVE   &kp N1    &kp N2    &kp N3   &kp N4    &kp N5    &kp N6                                                        &kp N7     &kp N8    &kp N9   &kp N0   &kp MINUS &kp EQUAL  &kp BSPC  &kp BSPC
 // ┌────┴─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ┌─────────┬─────────┐     ┌─────────┬─────────┐   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┴───┐
 // │      Tab     │    Q    │    W    │    E    │    R    │    T    │    Y    │ |   F1    |   F2    |     |   F7    |   F8    |   │    Y    │    U    │    I    │    O    │    P    |    [    |    ]    |      \      |
        &kp TAB       &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y      &kp F1     &kp F2          &kp F7    &kp F8        &kp Y     &kp U     &kp I     &kp O     &kp P   &kp LBKT   &kp RBKT    &kp BSLH
@@ -22,8 +22,8 @@
 // |    CAPS/CTRL    |    A    |    S    |    D    |    F    |    G    |        |   F3    |   F4    |     |   F9    |   F10   |     |     H   |    J    |    K    |    L    |   ;     |    '    |        ENTER        |
      &mt LCTRL CAPS     &kp A     &kp S    &kp D      &kp F     &kp G             &kp F3     &kp F4          &kp F9    &kp F10         &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS       &kp ENTER
 // ├──────────┬──────┴──┬──────┴──┬──────┴──┬──────┴──┬──────┴──┬──────┴──┐     ├─────────┼─────────┤     ├─────────┼─────────┤ ┌───┴─────┬───┴─────┬───┴─────┬───┴─────┬───┴─────┬───┴─────┬───┴────────────┬────────┤
-// |  SHIFT      *NONE  |    Z    |    X    |    C    |    V    |    B    |     |   F5    |   F6    |     |   F11   |   F12   | │     B   │    N    │    M    │    ,    │    .    │    /    |     SHIFT        *NONE  |
-    &kp LSHIFT   &none    &kp Z      &kp X     &kp C     &kp V     &kp B          &kp F5    &kp F6           &kp F11   &kp F12     &kp B      &kp N    &kp M   &kp COMMA  &kp DOT  &kp SLASH    &kp RSHIFT     &none
+// |        SHIFT       |    Z    |    X    |    C    |    V    |    B    |     |   F5    |   F6    |     |   F11   |   F12   | │     B   │    N    │    M    │    ,    │    .    │    /    |     SHIFT         MO 1  |
+          &kp LSHIFT       &kp Z      &kp X     &kp C     &kp V     &kp B          &kp F5    &kp F6           &kp F11   &kp F12     &kp B      &kp N    &kp M   &kp COMMA  &kp DOT  &kp SLASH    &kp RSHIFT     &mo 1 
 // └────┬─────┴─────┬───┴───────┬─┴─────────┼─────────┴─┬───────┴─────────┘     ├─────────┼─────────┘     └─────────┼─────────┤ └─────────┴─────────┴─────────┴───┬─────┴─────┬───┴───────┬─┴─────────┬──────┴────┬───┘                                                                                                                                                                                                   ┌─────────────────────────┐
 //      |   CTRL    |    GUI    |    ALT    |    MO 1   |                       |   MUTE  |                         | DELETE  |                                   |    MO 1   |    ALT    |    GUI    |    CTRL   |
           &kp LCTRL   &kp LGUI    &kp LALT      &mo 1                            &kp C_MUTE                           &kp DEL                                         &mo 1     &kp RALT    &kp RGUI    &kp RCTRL
@@ -34,7 +34,7 @@
             >;  
 //                                                          ┌─────────┬─────────┬─────────┐                         ┌─────────┬─────────┬─────────┐
 //                                                          | Left Enconder: Left Right   |                         | No Encoder Installed(◡︵◡) |      
-            sensor-bindings = <                                &inc_dec_kp LEFT RIGHT                                                              >;
+            sensor-bindings = <                              &inc_dec_kp C_VOL_UP C_VOL_DN                                                         >;
 //                                                          └─────────┴─────────┴─────────┘                         └─────────┴─────────┴─────────┘
         };
 
@@ -50,8 +50,8 @@
 // |                 |  LEFT   |   DOWN  |  RIGHT  |         |         |        |   BT3   |   BT4   |     |         |         |     |         |  LEFT   |   DOWN  |  RIGHT  |         |         |                     |
           &none       &kp LEFT  &kp DOWN  &kp RIGHT   &none     &none          &bt BT_SEL 3 &bt BT_SEL 4     &none     &none           &none    &kp LEFT  &kp DOWN &kp RIGHT   &none     &none           &none
 // ├──────────┬──────┴──┬──────┴──┬──────┴──┬──────┴──┬──────┴──┬──────┴──┐     ├─────────┼─────────┤     ├─────────┼─────────┤ ┌───┴─────┬───┴─────┬───┴─────┬───┴─────┬───┴─────┬───┴─────┬───┴────────────┬────────┤
-// |   CAPS        *    |         |         |         |         |         |     |   BT5   |   BT6   |     | BT CLEAR|ZMK UNLK | │         │  Vol Up │ Vol Dwn │         │         │         |                     *   |
-     &kp CAPS    &none     &none     &none     &none     &none     &none       &bt BT_SEL 5 &bt BT_SEL 6  &bt BT_CLR &studio_unlock &none &kp C_VOL_DN &kp C_VOL_UP &none  &none     &none         &none       &none
+// |        CAPS        |         |         |         |         |         |     |   BT5   |   BT6   |     | BT CLEAR|ZMK UNLK | │         │  Vol Up │ Vol Dwn │         │         │         |                     *   |
+          &kp CAPS        &none     &none     &none     &none     &none       &bt BT_SEL 5 &bt BT_SEL 6  &bt BT_CLR &studio_unlock &none &kp C_VOL_DN &kp C_VOL_UP &none  &none     &none         &none       &none
 // └────┬─────┴─────┬───┴───────┬─┴─────────┼─────────┴─┬───────┴─────────┘     ├─────────┼─────────┘     └─────────┼─────────┤ └─────────┴─────────┴─────────┴───┬─────┴─────┬───┴───────┬─┴─────────┬──────┴────┬───┘                                                                                                                                                                                                   ┌─────────────────────────┐
 //      |           |           |           |           |                       |  RESET  |                         |         |                                   |           |           |           |           | 
             &none       &none        &none     &none                            &bootloader                            &none                                          &none       &none       &none       &none
@@ -67,7 +67,6 @@
         };
     };
 };
-
 
 // Formatting Keys and Guides
 //    ┌ ─ ┬ ─ ┐
