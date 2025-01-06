@@ -2,10 +2,10 @@
 
 / {
     chosen {
-        zmk,physical-layout = &default_layout;
+        zmk,physical-layout = &split_space_layout;
     };
 
-    default_layout: default_layout {
+    default_layout: keymap_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Game Roy ADVANCE Default";
         transform = <&default_transform>;
@@ -95,7 +95,7 @@
             ;
     };
 
- SplitBS_layout: SplitBS_layout {
+ SplitBS_layout: keymap_layout_1 {
         compatible = "zmk,physical-layout";
         display-name = "Game Roy ADVANCE Split BS";
         transform = <&SplitBS_transform>;
@@ -188,7 +188,7 @@
             ;
     };
 
-     Outtatim_layout: Outtatim_layout {
+     Outtatim_layout: keymap_layout_2 {
         compatible = "zmk,physical-layout";
         display-name = "Game Roy ADVANCE Outtatim";
         transform = <&SplitBS_transform>;
