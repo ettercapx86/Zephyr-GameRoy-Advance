@@ -192,7 +192,7 @@
         compatible = "zmk,physical-layout";
         display-name = "Game Roy ADVANCE Outtatim";
 
-        transform = <&Outtatime_transform>;
+        transform = <&Outtatim_transform>;
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100   50    0       0     0     0>
             , <&key_physical_attrs 100 100  150    0       0     0     0>
