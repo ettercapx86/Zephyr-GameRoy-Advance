@@ -1,10 +1,10 @@
 #include <physical_layouts.dtsi>
 
 / {
-    Standard_layout: Standard_layout {
+    default_layout: default_layout {
         compatible = "zmk,physical-layout";
         display-name = "Game Roy ADVANCE Default";
-        transform = <&Standard_transform>;
+        transform = <&default_transform>;
         kscan = <&kscan0>;
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100   50    0       0     0     0>
