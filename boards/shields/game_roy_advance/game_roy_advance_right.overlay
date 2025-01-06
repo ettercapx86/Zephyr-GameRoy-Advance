@@ -1,6 +1,6 @@
 #include "game_roy_advance.dtsi"
 
-&default_transform {
+&Standard_transform {
 	col-offset = <9>;
 };
 
