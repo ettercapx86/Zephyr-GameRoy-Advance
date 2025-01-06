@@ -2,7 +2,7 @@
 
 / {
     chosen {
-        zmk,physical-layout = &split_space_layout;
+        zmk,physical-layout = &default_layout;
     };
 
     default_layout: keymap_layout_0 {
