@@ -296,13 +296,13 @@
         SplitBS_map: SplitBS {
             physical-layout = <&SplitBS_layout>;
             positions
-                = < 13 14 51 52 68 69;
+                = < 13 14 51 52 68 69 >;
         };
 
         Outtatim_map: Outtatim {
             physical-layout = <&Outtatim_layout>;
             positions
-                = < 13 14 50 85 67 68;
+                = < 13 14 50 85 67 68 >;
         };
     };
 };
