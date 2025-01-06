@@ -1,0 +1,12 @@
+file_format: "1"
+id: game_roy_advance
+name: Game_Roy_Advance
+type: shield
+url: https://keystonecaps.store/?product=game-roy-advance-game-pad-group-buy-preorder
+requires: [pro_micro]
+features:
+  - keys
+  - encoder
+siblings:
+  - game_roy_advance_left
+  - game_roy_advance_right
