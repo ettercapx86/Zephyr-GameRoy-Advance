@@ -1,5 +1,5 @@
 config SHIELD_GAME_ROY_ADVANCE_LEFT
-	def_bool $(shields_list_contains,game_roy_advanced_left)
+	def_bool $(shields_list_contains,game_roy_advance_left)
 
 config SHIELD_GAME_ROY_ADVANCE_RIGHT
 	def_bool $(shields_list_contains,game_roy_advance_right)
